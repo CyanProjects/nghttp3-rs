@@ -56,6 +56,7 @@ fn main() {
     let mut cfg = cc::Build::new();
     cfg.include("nghttp3/lib/includes")
         .include(&include).file("nghttp3/lib/nghttp3_balloc.c")
+        .file("nghttp3/lib/sfparse/sfparse.c")
         .file("nghttp3/lib/nghttp3_buf.c")
         .file("nghttp3/lib/nghttp3_callbacks.c")
         .file("nghttp3/lib/nghttp3_conn.c")

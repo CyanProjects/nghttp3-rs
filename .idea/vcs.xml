@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/nghttp3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nghttp3/lib/sfparse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nghttp3/tests/munit" vcs="Git" />
   </component>
 </project>
