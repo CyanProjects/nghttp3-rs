@@ -1,0 +1,21 @@
+[package]
+name = "libnghttp3-sys"
+version = "0.0.1+1.11.0"
+authors = ["Cyan Changes <contact@cyans.me>", "Alex Crichton <alex@alexcrichton.com>"]
+links = 'nghttp3'
+license = "MIT/Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/CyanProjects/nghttp3-rs"
+homepage = "https://github.com/CyanProjects/nghttp3-rs"
+description = """
+FFI bindings for libnghttp3 (nghttp3)
+"""
+
+[lib]
+doctest = false
+
+[dependencies]
+libc = '0.2'
+
+[build-dependencies]
+cc = "1.2.32"
