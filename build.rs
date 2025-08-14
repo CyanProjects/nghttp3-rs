@@ -51,11 +51,12 @@ fn main() {
         "nghttp3/lib/includes/nghttp3/nghttp3.h",
         include.join("nghttp3/nghttp3.h"),
     )
-        .unwrap();
+    .unwrap();
 
     let mut cfg = cc::Build::new();
     cfg.include("nghttp3/lib/includes")
-        .include(&include).file("nghttp3/lib/nghttp3_balloc.c")
+        .include(&include)
+        .file("nghttp3/lib/nghttp3_balloc.c")
         .file("nghttp3/lib/sfparse/sfparse.c")
         .file("nghttp3/lib/nghttp3_buf.c")
         .file("nghttp3/lib/nghttp3_callbacks.c")
@@ -87,7 +88,6 @@ fn main() {
         .file("nghttp3/lib/nghttp3_vec.c")
         .file("nghttp3/lib/nghttp3_version.c")
         .warnings(false)
-        .define("HAVE_UNISTD_H", None)
         .define("NGHTTP3_STATICLIB", None)
         .define("HAVE_NETINET_IN", None)
         .define("HAVE_TIME_H", None)
@@ -107,7 +107,8 @@ fn main() {
             }
         }
     } else {
-        cfg.define("HAVE_ARPA_INET_H", None);
+        cfg.define("HAVE_ARPA_INET_H", None)
+            .define("HAVE_UNISTD_H", None);
     }
     cfg.compile("nghttp3");
 
